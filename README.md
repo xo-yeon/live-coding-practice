@@ -4,6 +4,10 @@
 
 ## 빠른 시작
 
+60분 React/TypeScript 면접을 준비한다면 [송금 예약 관리 과제](practice/2026-09-21/04-scheduled-transfers/problem.md)부터 시작하세요.
+`pnpm dev` 실행 후 http://localhost:5173/practice/transfers 에서 조작할 수 있습니다.
+사전 읽기 60분과 면접 60분은 별도로 진행합니다. [연습 가이드](docs/60-minute-practice.md)를 참고하세요.
+
 Node.js 20 이상과 pnpm이 필요합니다. 이 저장소는 pnpm 9.15.3으로 구성했습니다.
 
 ```bash
@@ -28,7 +32,7 @@ AI 없이 VS Code 기본 TypeScript IntelliSense, 파라미터 힌트, 자동 im
 
 1. `pnpm run doctor`
 2. AI에게 “오늘 라이브 코딩 문제 만들어줘”라고 요청
-3. 생성된 `working` 폴더를 VS Code에서 열기
+3. 저장소 루트의 `interview.code-workspace`를 열고 생성된 `working` 코드를 찾기
 4. “오늘 문제로 면접 시작해줘”라고 요청
 5. 코드를 읽으며 문제와 우선순위를 말하기
 6. 지원자가 직접 코드 수정
@@ -53,7 +57,7 @@ pnpm interview:check              # 타입 검사 + 전체 테스트 + 린트 + 
 pnpm dev                          # Vite 개발 서버
 pnpm test                         # 전체 테스트 1회
 pnpm test:watch                   # 전체 테스트 watch
-pnpm vitest practice/2026-09-21/01-ad-metrics/tests  # 특정 문제 watch
+pnpm vitest practice/2026-09-21/04-scheduled-transfers/tests  # 현재 문제 watch
 pnpm typecheck                    # TypeScript 검사
 pnpm lint                         # ESLint 검사
 pnpm practice:new --title "문제명" # 날짜별 문제 생성
@@ -73,7 +77,19 @@ practice/YYYY-MM-DD/NN-title/
 .interviewer/YYYY-MM-DD/NN-title/ # 정답 공개 전 비공개
 ```
 
-최초 예제는 잘못된 광고 지표, React 캠페인 필터, 비동기 캠페인 검색 세 가지입니다. `.interviewer`는 VS Code 탐색기와 검색에서 기본적으로 숨겨지며 Git에는 포함됩니다.
+현재 과제는 60분 송금 예약 관리입니다. 01~03 워밍업 문제는 제거했으며, 기존 링크를 유지하기 위해 현재 과제 번호 04는 그대로 둡니다. `.interviewer`는 VS Code 탐색기와 검색에서 기본적으로 숨겨지며 Git에는 포함됩니다.
+
+## VS Code에서 열기
+
+저장소 루트의 `interview.code-workspace`를 열거나 `C:\source\live-coding-practice` 폴더 전체를 엽니다.
+아래 명령도 같은 워크스페이스를 엽니다.
+
+```powershell
+code "C:\source\live-coding-practice\interview.code-workspace"
+```
+
+`working` 폴더만 별도 프로젝트로 열면 루트의 VS Code 설정과 의존성을 사용하기 불편하므로 루트를 연 상태에서 해당 파일을 수정하세요.
+통합 터미널도 `package.json`이 있는 루트에서 실행합니다.
 
 ## 실제 면접 전
 
