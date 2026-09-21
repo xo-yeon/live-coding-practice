@@ -1,0 +1,8 @@
+{
+  "folders": [{ "name": "Live Coding", "path": "." }],
+  "settings": {
+    "files.exclude": { "**/.interviewer": true },
+    "search.exclude": { "**/.interviewer/**": true },
+    "workbench.startupEditor": "none"
+  }
+}

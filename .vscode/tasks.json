@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev: 개발 서버",
+      "type": "shell",
+      "command": "pnpm dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": { "regexp": "^$" },
+        "background": { "activeOnStart": true, "beginsPattern": ".*", "endsPattern": "Local:" }
+      },
+      "group": "build"
+    },
+    {
+      "label": "test: 현재 테스트 watch",
+      "type": "shell",
+      "command": "pnpm vitest \"${file}\"",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    { "label": "test: 전체", "type": "shell", "command": "pnpm test", "problemMatcher": [] },
+    {
+      "label": "typecheck",
+      "type": "shell",
+      "command": "pnpm typecheck",
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "pnpm lint",
+      "problemMatcher": "$eslint-stylish"
+    },
+    {
+      "label": "interview: 환경 점검",
+      "type": "shell",
+      "command": "pnpm interview:check",
+      "problemMatcher": []
+    }
+  ]
+}

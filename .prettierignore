@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+pnpm-lock.yaml
+.interviewer
+practice/**/before
+interview.code-workspace
+public/mockServiceWorker.js
