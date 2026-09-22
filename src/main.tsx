@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { App } from './App';
+import { BeginnerPractice } from './BeginnerPractice';
 import { TransferPage } from '../practice/2026-09-21/04-scheduled-transfers/working/TransferPage';
 import './styles.css';
 
@@ -17,7 +18,13 @@ async function start() {
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <QueryClientProvider client={queryClient}>
-        {window.location.pathname === '/practice/transfers' ? <TransferPage /> : <App />}
+        {window.location.pathname === '/practice/basics' ? (
+          <BeginnerPractice />
+        ) : window.location.pathname === '/practice/transfers' ? (
+          <TransferPage />
+        ) : (
+          <App />
+        )}
       </QueryClientProvider>
     </StrictMode>,
   );

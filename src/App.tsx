@@ -25,6 +25,9 @@ export function App() {
         <p className="eyebrow">FRONTEND LIVE CODING</p>
         <h1>광고 캠페인 운영 현황</h1>
         <p>이 화면은 실행 환경 확인용입니다. 실제 연습 코드는 practice 폴더에서 수정하세요.</p>
+        <p>
+          <a href="/practice/basics">Level 1: 짧은 React 코드 연습</a>
+        </p>
         <a href="/practice/transfers">60분 연습: 송금 예약 관리 열기</a>
       </header>
       {isPending && <p role="status">캠페인을 불러오는 중…</p>}

@@ -4,9 +4,24 @@
 
 ## 빠른 시작
 
-60분 React/TypeScript 면접을 준비한다면 [송금 예약 관리 과제](practice/2026-09-21/04-scheduled-transfers/problem.md)부터 시작하세요.
-`pnpm dev` 실행 후 http://localhost:5173/practice/transfers 에서 조작할 수 있습니다.
-사전 읽기 60분과 면접 60분은 별도로 진행합니다. [연습 가이드](docs/60-minute-practice.md)를 참고하세요.
+현재는 짧은 Level 1부터 시작합니다. [좋은 코드 판단 가이드](docs/beginner-guide.md)를 먼저 읽어보세요.
+
+| 순서 | 과제                                                                                     | 권장 시간 |
+| ---- | ---------------------------------------------------------------------------------------- | --------- |
+| 01   | [거래 합계](practice/2026-09-22/01-transaction-summary/problem.md) — 함수 하나           | 15분      |
+| 02   | [생활비 예산 입력](practice/2026-09-22/02-budget-input/problem.md) — 작은 React 컴포넌트 | 20분      |
+| 03   | [받는 분 선택](practice/2026-09-22/03-recipient-picker/problem.md) — 검색과 선택         | 25분      |
+
+처음에는 시간 제한 없이 진행해도 됩니다. 각 문제에 기본 공개 테스트 2개를 제공하며, 빠진 요구사항의 테스트를 직접 추가하는 연습을 합니다.
+`pnpm dev` 후 http://localhost:5173/practice/basics 에서 02·03 화면을 조작합니다. 01은 아래 테스트 명령으로 실행합니다.
+
+```bash
+pnpm vitest practice/2026-09-22/01-transaction-summary/tests
+```
+
+AI에게 “01 문제 학습 모드로 시작해줘”라고 요청하세요. 입력과 기대 결과부터 질문 하나씩 진행합니다.
+이후 Level 2로 늘리고 [송금 예약 관리 60분 과제](practice/2026-09-21/04-scheduled-transfers/problem.md)를 진행합니다.
+60분 과제 화면은 http://localhost:5173/practice/transfers 입니다.
 
 Node.js 20 이상과 pnpm이 필요합니다. 이 저장소는 pnpm 9.15.3으로 구성했습니다.
 
@@ -57,7 +72,7 @@ pnpm interview:check              # 타입 검사 + 전체 테스트 + 린트 + 
 pnpm dev                          # Vite 개발 서버
 pnpm test                         # 전체 테스트 1회
 pnpm test:watch                   # 전체 테스트 watch
-pnpm vitest practice/2026-09-21/04-scheduled-transfers/tests  # 현재 문제 watch
+pnpm vitest practice/2026-09-22/01-transaction-summary/tests  # 첫 문제 watch
 pnpm typecheck                    # TypeScript 검사
 pnpm lint                         # ESLint 검사
 pnpm practice:new --title "문제명" # 날짜별 문제 생성
@@ -77,7 +92,7 @@ practice/YYYY-MM-DD/NN-title/
 .interviewer/YYYY-MM-DD/NN-title/ # 정답 공개 전 비공개
 ```
 
-현재 과제는 60분 송금 예약 관리입니다. 01~03 워밍업 문제는 제거했으며, 기존 링크를 유지하기 위해 현재 과제 번호 04는 그대로 둡니다. `.interviewer`는 VS Code 탐색기와 검색에서 기본적으로 숨겨지며 Git에는 포함됩니다.
+현재는 2026-09-22의 새 Level 1 문제 01~03을 순서대로 진행합니다. 삭제했던 2026-09-21의 워밍업과는 다른 문제입니다. 기존 송금 예약 관리 과제는 2026-09-21/04에 보관합니다. `.interviewer`는 VS Code 탐색기와 검색에서 기본적으로 숨겨지며 Git에는 포함됩니다.
 
 ## VS Code에서 열기
 
