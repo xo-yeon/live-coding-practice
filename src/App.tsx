@@ -29,6 +29,12 @@ export function App() {
           <a href="/practice/basics">Level 1: 짧은 React 코드 연습</a>
         </p>
         <a href="/practice/transfers">60분 연습: 송금 예약 관리 열기</a>
+        <p>
+          <a href="/practice/installments">Level 2 · 01 할부 예상 금액 조회</a>
+        </p>
+        <p>
+          <a href="/practice/savings">Level 2 · 02 저축 목표별 금액 배분</a>
+        </p>
       </header>
       {isPending && <p role="status">캠페인을 불러오는 중…</p>}
       {error && <p role="alert">{error.message}</p>}
