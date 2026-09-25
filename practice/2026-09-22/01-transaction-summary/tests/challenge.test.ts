@@ -7,6 +7,7 @@ describe('거래 합계 — 공개 테스트', () => {
       summarizeTransactions([
         { id: 'a', amount: 1000, status: 'COMPLETED' },
         { id: 'b', amount: 2000, status: 'COMPLETED' },
+        { id: 'c', amount: 0, status: 'CANCELLED' },
       ]),
     ).toEqual({ count: 2, total: 3000 });
   });

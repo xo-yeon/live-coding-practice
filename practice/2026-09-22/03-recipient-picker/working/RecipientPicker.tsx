@@ -10,15 +10,31 @@ export function RecipientPicker({ recipients }: { recipients: Recipient[] }) {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const visible = recipients.filter((item) => item.name.includes(keyword));
 
+  /* [내 작성 코드]
   function toggle(id: string) {
     const index = selectedIds.indexOf(id);
+
     if (index === -1) selectedIds.push(id);
     else selectedIds.splice(index, 1);
-    setSelectedIds(selectedIds);
+
+    setSelectedIds([...selectedIds]);
+  }
+
+  function allVisibleSelected() {
+    const allIds = new Set([...selectedIds, ...visible.map((item) => item.id)]);
+    setSelectedIds(Array.from(allIds));
+  }
+  */
+
+  // [정답 코드]
+  function toggle(id: string) {
+    setSelectedIds((current) =>
+      current.includes(id) ? current.filter((value) => value !== id) : [...current, id],
+    );
   }
 
   function selectVisible() {
-    setSelectedIds(visible.map((item) => item.id));
+    setSelectedIds((current) => [...new Set([...current, ...visible.map((item) => item.id)])]);
   }
 
   return (
@@ -28,6 +44,7 @@ export function RecipientPicker({ recipients }: { recipients: Recipient[] }) {
         이름 검색
         <input value={keyword} onChange={(event) => setKeyword(event.target.value)} />
       </label>
+      {/* [정답 코드]: selectVisible 연결 (내 작성 코드: allVisibleSelected) */}
       <button type="button" onClick={selectVisible}>
         검색 결과 모두 선택
       </button>
