@@ -43,6 +43,8 @@ pnpm dev
 
 [Ads 운영툴 예상 문제 12선](theory/ads/README.md)은 지표·예산·심사 상태·계정 격리·일괄 작업·시간대·대량 테이블·내보내기를 다룹니다. [면접 진행 가이드](theory/ads/interview-playbook.md)에서 우선순위와 수정 전후 설명, 60분 연습 배분, 종합 변형 문제를 확인할 수 있습니다. 실제 기출로 확인된 자료는 아닙니다.
 
+[기술 스택 속성 과정](theory/stack/README.md)은 TanStack Query, Jotai, Yarn Berry, pnpm, Vite·esbuild·SWC, GitHub Actions·CircleCI, Next.js·Emotion을 핵심 원리·실수·면접 질문 중심으로 정리합니다.
+
 ### Practice Mode
 
 AI가 나쁜 코드와 문제 상황을 만들고 면접관 역할을 합니다. 면접을 시작한 뒤에는 지원자가 요청하지 않은 코드를 수정하거나 답을 먼저 밝히지 않습니다. 원본은 `before`, 지원자가 고칠 코드는 `working`, 공개 테스트는 `tests`에 있습니다. 비공개 문제·채점·개선안은 `.interviewer`에 있으며 **“정답 공개”** 전에는 열거나 AI에게 인용을 요청하지 마세요.
