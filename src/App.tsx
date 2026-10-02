@@ -35,6 +35,12 @@ export function App() {
         <p>
           <a href="/practice/savings">Level 2 · 02 저축 목표별 금액 배분</a>
         </p>
+        <p>
+          <a href="/practice/tickets">Level 2 · 지원 요청함</a>
+        </p>
+        <p>
+          <a href="/practice/documents">Level 2 · 팀 문서 편집기</a>
+        </p>
       </header>
       {isPending && <p role="status">캠페인을 불러오는 중…</p>}
       {error && <p role="alert">{error.message}</p>}
