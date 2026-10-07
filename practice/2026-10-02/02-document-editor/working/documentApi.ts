@@ -21,6 +21,7 @@ export async function saveDocument(
   id: DocumentId;
   content: string;
 }> {
+  // 정답 수정 6: 공개된 저장 API 계약의 300ms 지연을 유지한다.
   await new Promise((resolve) => setTimeout(resolve, 300));
   const attempt = (attempts.get(id) ?? 0) + 1;
   attempts.set(id, attempt);

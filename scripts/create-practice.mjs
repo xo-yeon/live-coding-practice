@@ -65,7 +65,25 @@ await writeFile(
 );
 await writeFile(
   path.join(challengeDirectory, 'notes.md'),
-  '# 분석 노트\n\n## 확인한 문제\n\n## 우선순위와 근거\n\n## 검증 결과\n',
+  `# 분석 노트
+
+## 발견한 문제
+
+- 재현·현상:
+- 기대 / 실제:
+- 사용자 영향·우선순위:
+
+## 수정 계획
+
+- 원인과 최소 수정:
+- 제외할 범위·예상 위험:
+
+## 검증
+
+- 수정 전 실패 테스트:
+- 수정 후 테스트·타입 검사:
+- 수동 확인·남은 위험:
+`,
 );
 await writeFile(
   path.join(challengeDirectory, 'review.md'),

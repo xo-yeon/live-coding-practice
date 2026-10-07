@@ -14,8 +14,11 @@ export const initialTickets: Ticket[] = [
 ];
 
 export function filterTickets(tickets: Ticket[], query: string, status: StatusFilter): Ticket[] {
-  const keyword = query.trim();
+  // 정답 수정 3: 검색어와 제목을 같은 방식으로 정규화해 대소문자를 무시한다.
+  const keyword = query.trim().toLowerCase();
   return tickets.filter(
-    (ticket) => ticket.title.includes(keyword) && (status === 'all' || ticket.status === status),
+    (ticket) =>
+      ticket.title.toLowerCase().includes(keyword) &&
+      (status === 'all' || ticket.status === status),
   );
 }

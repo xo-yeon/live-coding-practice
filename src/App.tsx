@@ -41,6 +41,12 @@ export function App() {
         <p>
           <a href="/practice/documents">Level 2 · 팀 문서 편집기</a>
         </p>
+        <p>
+          <a href="/practice/sessions">Level 2 · 세션 일정 만들기</a>
+        </p>
+        <p>
+          <a href="/practice/products">Level 2 · 상품 검색</a>
+        </p>
       </header>
       {isPending && <p role="status">캠페인을 불러오는 중…</p>}
       {error && <p role="alert">{error.message}</p>}
